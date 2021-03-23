@@ -1,6 +1,6 @@
 TARGET   = JavaDriverTest.jar
 
-JFLAGS=-g --release 10
+JFLAGS=-g --release 8
 JC=javac
 JAR=jar
 
@@ -23,12 +23,12 @@ $(JARDIR)/$(TARGET): $(OBJECTS)
 
 jar: $(JARDIR)/$(TARGET)
 
-.PHONY: clean
-clean:
+.PHONY: clean-build
+clean-build:
 	@$(RM) $(OBJECTS)
 	@echo "Cleanup complete!"
 
 .PHONY: remove
-remove: clean
+clean: clean-build
 	@$(RM) $(JARDIR)/$(TARGET)
-	@echo "Executable removed!"
+	@echo "Jar file removed!"
