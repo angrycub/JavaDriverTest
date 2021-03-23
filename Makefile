@@ -1,6 +1,6 @@
 TARGET   = JavaDriverTest.jar
 
-JFLAGS=-g
+JFLAGS=-g --release 10
 JC=javac
 JAR=jar
 
